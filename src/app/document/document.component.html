@@ -1,0 +1,10 @@
+<ng-container *ngIf="documentInfo | async; let info">
+  <md-card>
+    <md-card-title>
+      <span>{{ info.collectionName }}: {{ info.documentId }}</span>
+    </md-card-title>
+    <md-card-content>
+      <app-editor [collectionName]="info.collectionName" [documentId]="info.documentId"></app-editor>
+    </md-card-content>
+  </md-card>
+</ng-container>
